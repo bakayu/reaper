@@ -14,10 +14,22 @@ impl Config {
             return Err("not enough arguments");
         }
 
-        let query = args[1].clone();
-        let file_path = args[2].clone();
+        let mut ignore_case = env::var("IGNORE_CASE").is_ok();
+        let mut query_index = 1;
+        let mut file_path_index = 2;
 
-        let ignore_case = env::var("IGNORE_CASE").is_ok();
+        if args[1] == "-i" || args[1] == "--ignore-case" {
+            if args.len() < 4 {
+                return Err("not enough arguments when using flags");
+            }
+
+            ignore_case = true;
+            query_index = 2;
+            file_path_index = 3;
+        }
+
+        let query = args[query_index].clone();
+        let file_path = args[file_path_index].clone();
 
         Ok(Config {
             query,
