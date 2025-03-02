@@ -15,7 +15,7 @@ Reaper is a command-line tool that searches for specific text patterns in files,
 
 ## Installation
 
-- Pre-requisites: `Rust v1.82+`
+- Pre-requisites: `Cargo, Rust v1.82+`
 
 - Build the project with:
 
