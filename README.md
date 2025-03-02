@@ -20,7 +20,7 @@ Reaper is a command-line tool that searches for specific text patterns in files,
 - Build the project with:
 
 ```bash
-git clone https://github.com/yourusername/reaper.git
+git clone https://github.com/bakayu/reaper.git
 cd reaper
 cargo build --release
 ```
