@@ -10,11 +10,8 @@ Reaper is a command-line tool that searches for specific text patterns in files,
 
 - Fast text searching in files
 - Case-sensitive searching (default)
-
-#### TODO!
-
-- [ ] Case-insensitive searching with a flag
-- [ ] Clear and helpful output formatting
+- Case-insensitive searching with a flag
+- Clear and helpful output formatting
 
 ## Installation
 
@@ -32,7 +29,7 @@ cargo build --release
 
 ## Usage
 
-Use the utility with the following commands:
+Use the utility with the following commands: (make sure to add the path to the binary to your environment)
 
 ```bash
 reaper [OPTIONS] <PATTERN> <FILE>
@@ -53,13 +50,13 @@ repear text somefile.txt
 - Search for "rust" case-insensitively:
 
 ```bash
-reaper -i rust somefilt.txt
+reaper -i rust somefile.txt
 ```
 
 or
 
 ```bash
-reaper --ignore-case rust somefilt.txt
+reaper --ignore-case rust somefile.txt
 ```
 
 ### Tests
