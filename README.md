@@ -29,7 +29,7 @@ cargo build --release
 
 ## Usage
 
-Use the utility with the following commands: (make sure to add the path to the binary to your environment)
+Use the utility with the following commands: (make sure to add the path of the binary to your environment)
 
 ```bash
 reaper [OPTIONS] <PATTERN> <FILE>
