@@ -18,14 +18,14 @@ impl Config {
         let mut query_index = 1;
         let mut file_path_index = 2;
 
-        if args[1] == "-i" || args[1] == "--ignore-case" {
-            if args.len() < 4 {
-                return Err("not enough arguments when using flags");
-            }
-
+        if args.len() >= 4 && (args[1] == "-i" || args[1] == "--ignore-case") {
             ignore_case = true;
             query_index = 2;
             file_path_index = 3;
+        }
+
+        if file_path_index >= args.len() {
+            return Err("not enough arguments when using flags");
         }
 
         let query = args[query_index].clone();
